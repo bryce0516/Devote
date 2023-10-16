@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  @Environment(\.managedObjectContext) private var viewContext
+  
+  @FetchRequest(
+    sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default
+  )
+  private var items: FetchedResults<Item>
+  
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+      
+      Text("helo")
+//      List {
+//        ForEach(items) { item in
+//          Text("Items at \(item.timestamp!, formatter: itemFormatter)")
+//        }
+//        .onDelete(perform: deleteItems)
+//      }
+//      .toolbar {
+//        
+//        #if os(iOS)
+//        EditButton()
+//        #endif
+//        
+//        Button(action: additem, label: {
+//          Label("Add Item", systemImage: "plus")
+//        })
+//        
+//      }
     }
 }
 
