@@ -11,6 +11,9 @@
 		B54D3BF22ADD6C9D00DEB996 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3BF12ADD6C9D00DEB996 /* ContentView.swift */; };
 		B54D3BF42ADD6CA000DEB996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BF32ADD6CA000DEB996 /* Assets.xcassets */; };
 		B54D3BF72ADD6CA000DEB996 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BF62ADD6CA000DEB996 /* Preview Assets.xcassets */; };
+		B54D3C002ADD6EAC00DEB996 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BFD2ADD6EAC00DEB996 /* sound-rise.mp3 */; };
+		B54D3C012ADD6EAC00DEB996 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BFE2ADD6EAC00DEB996 /* sound-tap.mp3 */; };
+		B54D3C022ADD6EAC00DEB996 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BFF2ADD6EAC00DEB996 /* sound-ding.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		B54D3BF12ADD6C9D00DEB996 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B54D3BF32ADD6CA000DEB996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B54D3BF62ADD6CA000DEB996 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B54D3BFD2ADD6EAC00DEB996 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
+		B54D3BFE2ADD6EAC00DEB996 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
+		B54D3BFF2ADD6EAC00DEB996 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,9 @@
 		B54D3BEE2ADD6C9D00DEB996 /* Devote */ = {
 			isa = PBXGroup;
 			children = (
+				B54D3C032ADD6EC400DEB996 /* Sound */,
 				B54D3BEF2ADD6C9D00DEB996 /* DevoteApp.swift */,
-				B54D3BF12ADD6C9D00DEB996 /* ContentView.swift */,
+				B54D3C042ADD6ECF00DEB996 /* View */,
 				B54D3BF32ADD6CA000DEB996 /* Assets.xcassets */,
 				B54D3BF52ADD6CA000DEB996 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				B54D3BF62ADD6CA000DEB996 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B54D3C032ADD6EC400DEB996 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				B54D3BFF2ADD6EAC00DEB996 /* sound-ding.mp3 */,
+				B54D3BFD2ADD6EAC00DEB996 /* sound-rise.mp3 */,
+				B54D3BFE2ADD6EAC00DEB996 /* sound-tap.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		B54D3C042ADD6ECF00DEB996 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B54D3BF12ADD6C9D00DEB996 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +150,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54D3C022ADD6EAC00DEB996 /* sound-ding.mp3 in Resources */,
+				B54D3C002ADD6EAC00DEB996 /* sound-rise.mp3 in Resources */,
 				B54D3BF72ADD6CA000DEB996 /* Preview Assets.xcassets in Resources */,
+				B54D3C012ADD6EAC00DEB996 /* sound-tap.mp3 in Resources */,
 				B54D3BF42ADD6CA000DEB996 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
