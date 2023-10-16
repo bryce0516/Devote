@@ -16,29 +16,42 @@ struct ContentView: View {
   )
   private var items: FetchedResults<Item>
   
-    var body: some View {
-      
-      Text("helo")
-//      List {
-//        ForEach(items) { item in
+  
+  private func additem() {
+    
+  }
+  
+  private func deleteItems() {
+    
+  }
+  var body: some View {
+    
+    NavigationView {
+      List {
+        ForEach(items) { item in
+          Text("Items at \(item.timestamp!)")
 //          Text("Items at \(item.timestamp!, formatter: itemFormatter)")
-//        }
+        }
 //        .onDelete(perform: deleteItems)
-//      }
-//      .toolbar {
-//        
-//        #if os(iOS)
-//        EditButton()
-//        #endif
-//        
-//        Button(action: additem, label: {
-//          Label("Add Item", systemImage: "plus")
-//        })
-//        
-//      }
-    }
+      } //: LIST
+      .toolbar {
+        
+        #if os(iOS)
+        ToolbarItem(placement: .topBarLeading) {
+          EditButton()
+        }
+        #endif
+        ToolbarItem(placement: .topBarTrailing) {
+          Button(action: additem, label: {
+            Label("Add Item", systemImage: "plus")
+          })
+        }
+        
+      } //: TOOLBAR
+    } //: NAVIGATION
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
