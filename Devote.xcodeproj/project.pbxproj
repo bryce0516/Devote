@@ -14,8 +14,8 @@
 		B54D3C002ADD6EAC00DEB996 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BFD2ADD6EAC00DEB996 /* sound-rise.mp3 */; };
 		B54D3C012ADD6EAC00DEB996 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BFE2ADD6EAC00DEB996 /* sound-tap.mp3 */; };
 		B54D3C022ADD6EAC00DEB996 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54D3BFF2ADD6EAC00DEB996 /* sound-ding.mp3 */; };
-		B54D3C0B2ADD6F2A00DEB996 /* Devote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C082ADD6F2A00DEB996 /* Devote.xcdatamodeld */; };
 		B54D3C0C2ADD6F2A00DEB996 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C0A2ADD6F2A00DEB996 /* Persistence.swift */; };
+		B54D3C112ADD7E6000DEB996 /* Devote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C0F2ADD7E6000DEB996 /* Devote.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		B54D3BFD2ADD6EAC00DEB996 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
 		B54D3BFE2ADD6EAC00DEB996 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 		B54D3BFF2ADD6EAC00DEB996 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
-		B54D3C092ADD6F2A00DEB996 /* Devote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devote.xcdatamodel; sourceTree = "<group>"; };
 		B54D3C0A2ADD6F2A00DEB996 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B54D3C0E2ADD6F7500DEB996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B54D3C102ADD7E6000DEB996 /* Devote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devote.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,8 @@
 		B54D3C0D2ADD6F2F00DEB996 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B54D3C082ADD6F2A00DEB996 /* Devote.xcdatamodeld */,
 				B54D3C0A2ADD6F2A00DEB996 /* Persistence.swift */,
+				B54D3C0F2ADD7E6000DEB996 /* Devote.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			files = (
 				B54D3BF22ADD6C9D00DEB996 /* ContentView.swift in Sources */,
 				B54D3C0C2ADD6F2A00DEB996 /* Persistence.swift in Sources */,
-				B54D3C0B2ADD6F2A00DEB996 /* Devote.xcdatamodeld in Sources */,
+				B54D3C112ADD7E6000DEB996 /* Devote.xcdatamodeld in Sources */,
 				B54D3BF02ADD6C9D00DEB996 /* DevoteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,13 +416,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B54D3C082ADD6F2A00DEB996 /* Devote.xcdatamodeld */ = {
+		B54D3C0F2ADD7E6000DEB996 /* Devote.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B54D3C092ADD6F2A00DEB996 /* Devote.xcdatamodel */,
+				B54D3C102ADD7E6000DEB996 /* Devote.xcdatamodel */,
 			);
-			currentVersion = B54D3C092ADD6F2A00DEB996 /* Devote.xcdatamodel */;
-			path = Devote.xcdatamodeld;
+			currentVersion = B54D3C102ADD7E6000DEB996 /* Devote.xcdatamodel */;
+			name = Devote.xcdatamodeld;
+			path = ../../../../../Downloads/DevoteiOS16/Devote/Model/Devote.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
