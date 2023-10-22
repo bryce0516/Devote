@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   
+  @State var task: String = ""
   @Environment(\.managedObjectContext) private var viewContext
   
   @FetchRequest(
@@ -26,15 +27,39 @@ struct ContentView: View {
   }
   var body: some View {
     NavigationView {
-      List {
-        ForEach(items) { item in
-          Text("Items at \(item.timestamp!)")
-          Text("Items at \(item.timestamp!, formatter: itemFormatter)")
-        }
-//        .onDelete(perform: deleteItems)
-      } //: LIST
+      VStack {
+        VStack(spacing: 16) {
+          TextField("New Task", text: $task)
+            .padding()
+            .background(
+              Color(UIColor.systemGray6)
+            )
+            .cornerRadius(10)
+          
+          Button(
+            action: {
+              additem()
+            },
+            label: {
+              Spacer()
+            Text("SAVE")
+              Spacer()
+          })
+          .padding()
+          .font(.headline)
+          .foregroundColor(.white)
+          .background(Color.pink)
+          .cornerRadius(10)
+        } //: VSTACK
+        .padding()
+        List {
+          ForEach(items) { item in
+            Text("Items at \(item.timestamp!, formatter: itemFormatter)")
+          }
+          //        .onDelete(perform: deleteItems)
+        } //: LIST
+      } //: VSTACK
       .toolbar {
-        
         #if os(iOS)
         ToolbarItem(placement: .topBarLeading) {
           EditButton()
@@ -45,12 +70,11 @@ struct ContentView: View {
             Label("Add Item", systemImage: "plus")
           })
         }
-        
       } //: TOOLBAR
     } //: NAVIGATION
   } //: BODY
 }
 
 #Preview {
-  ContentView()
+  ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
