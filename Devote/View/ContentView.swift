@@ -25,12 +25,11 @@ struct ContentView: View {
     
   }
   var body: some View {
-    
     NavigationView {
       List {
         ForEach(items) { item in
           Text("Items at \(item.timestamp!)")
-//          Text("Items at \(item.timestamp!, formatter: itemFormatter)")
+          Text("Items at \(item.timestamp!, formatter: itemFormatter)")
         }
 //        .onDelete(perform: deleteItems)
       } //: LIST
@@ -49,7 +48,7 @@ struct ContentView: View {
         
       } //: TOOLBAR
     } //: NAVIGATION
-  }
+  } //: BODY
 }
 
 #Preview {
