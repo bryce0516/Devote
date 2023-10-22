@@ -19,12 +19,34 @@ struct ContentView: View {
   
   
   private func additem() {
-    
+    withAnimation {
+      let newItem = Item(context: viewContext)
+      newItem.timestamp = Date()
+      newItem.task = task
+      newItem.completion = false
+      newItem.id = UUID()
+      
+      do {
+        try viewContext.save()
+      } catch {
+        let nsError = error as NSError
+        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+      }
+    }
   }
   
-  private func deleteItems() {
-    
+  private func deleteItems(offsets: IndexSet) {
+    withAnimation {
+      offsets.map { items[$0] }.forEach(viewContext.delete)
+      do {
+        try viewContext.save()
+      } catch {
+        let nsError = error as NSError
+        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+      }
+    }
   }
+  
   var body: some View {
     NavigationView {
       VStack {
@@ -54,11 +76,21 @@ struct ContentView: View {
         .padding()
         List {
           ForEach(items) { item in
-            Text("Items at \(item.timestamp!, formatter: itemFormatter)")
+            VStack(alignment: .leading) {
+              Text(item.task ?? "")
+                .font(.headline)
+                .fontWeight(.bold)
+              
+              Text("Items at \(item.timestamp!, formatter: itemFormatter)")
+                .font(.footnote)
+                .foregroundColor(.gray)
+            } //: LIST ITEM
           }
-          //        .onDelete(perform: deleteItems)
+          .onDelete(perform: deleteItems)
         } //: LIST
       } //: VSTACK
+      .navigationTitle("Daily Tasks")
+      .navigationBarTitleDisplayMode(.large)
       .toolbar {
         #if os(iOS)
         ToolbarItem(placement: .topBarLeading) {
