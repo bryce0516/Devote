@@ -19,6 +19,7 @@
 		B54D3C132AE4E64500DEB996 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C122AE4E64500DEB996 /* Constant.swift */; };
 		B54D3C152AE4ED8D00DEB996 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C142AE4ED8D00DEB996 /* HideKeyboardExtension.swift */; };
 		B54D3C172AE4F22600DEB996 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C162AE4F22600DEB996 /* BackgroundImageView.swift */; };
+		B54D3C192AE51B6C00DEB996 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C182AE51B6C00DEB996 /* NewTaskItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B54D3C122AE4E64500DEB996 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B54D3C142AE4ED8D00DEB996 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		B54D3C162AE4F22600DEB996 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		B54D3C182AE51B6C00DEB996 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				B54D3BF12ADD6C9D00DEB996 /* ContentView.swift */,
 				B54D3C162AE4F22600DEB996 /* BackgroundImageView.swift */,
+				B54D3C182AE51B6C00DEB996 /* NewTaskItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				B54D3C132AE4E64500DEB996 /* Constant.swift in Sources */,
 				B54D3C112ADD7E6000DEB996 /* Devote.xcdatamodeld in Sources */,
 				B54D3BF02ADD6C9D00DEB996 /* DevoteApp.swift in Sources */,
+				B54D3C192AE51B6C00DEB996 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
