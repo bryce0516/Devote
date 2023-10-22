@@ -55,6 +55,7 @@ struct ContentView: View {
               .font(.system(size: 30, weight: .semibold, design: .rounded))
             Text("New Task")
               .font(.system(size: 24, weight: .bold, design: .rounded))
+              
           })
           .foregroundColor(.white)
           .padding(.horizontal, 20)
@@ -73,6 +74,7 @@ struct ContentView: View {
             x: 0.0,
             y: 4.0
           )
+          .cornerRadius(30)
           
           // MARK: - TASKS
           List {
@@ -108,7 +110,7 @@ struct ContentView: View {
                 showNewTaskItem = false
               }
             }
-          NewTaskItemView()
+          NewTaskItemView(isShowing: $showNewTaskItem)
         }
         
         
