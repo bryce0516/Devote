@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
   
   @State var task: String = ""
+  
+  private var isButtonDisabled: Bool {
+    task.isEmpty
+  }
   @Environment(\.managedObjectContext) private var viewContext
   
   @FetchRequest(
@@ -32,6 +36,9 @@ struct ContentView: View {
         let nsError = error as NSError
         fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
       }
+      
+      task = ""
+      hideKeyboard()
     }
   }
   
@@ -67,10 +74,11 @@ struct ContentView: View {
             Text("SAVE")
               Spacer()
           })
+          .disabled(isButtonDisabled)
           .padding()
           .font(.headline)
           .foregroundColor(.white)
-          .background(Color.pink)
+          .background(isButtonDisabled ? Color.gray : Color.pink)
           .cornerRadius(10)
         } //: VSTACK
         .padding()
@@ -93,15 +101,15 @@ struct ContentView: View {
       .navigationBarTitleDisplayMode(.large)
       .toolbar {
         #if os(iOS)
-        ToolbarItem(placement: .topBarLeading) {
+        ToolbarItem(placement: .topBarTrailing) {
           EditButton()
         }
         #endif
-        ToolbarItem(placement: .topBarTrailing) {
-          Button(action: additem, label: {
-            Label("Add Item", systemImage: "plus")
-          })
-        }
+//        ToolbarItem(placement: .topBarTrailing) {
+//          Button(action: additem, label: {
+//            Label("Add Item", systemImage: "plus")
+//          })
+//        }
       } //: TOOLBAR
     } //: NAVIGATION
   } //: BODY
