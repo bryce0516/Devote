@@ -22,6 +22,7 @@
 		B54D3C192AE51B6C00DEB996 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C182AE51B6C00DEB996 /* NewTaskItemView.swift */; };
 		B54D3C1B2AE52ECB00DEB996 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54D3C1A2AE52ECB00DEB996 /* BlankView.swift */; };
 		B5D65D1F2AE686AB00DC051B /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D65D1E2AE686AB00DC051B /* ListRowItemView.swift */; };
+		B5D65D212AE6889800DC051B /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D65D202AE6889800DC051B /* CheckBoxStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B54D3C182AE51B6C00DEB996 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		B54D3C1A2AE52ECB00DEB996 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		B5D65D1E2AE686AB00DC051B /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
+		B5D65D202AE6889800DC051B /* CheckBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		B54D3C072ADD6EF300DEB996 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				B5D65D202AE6889800DC051B /* CheckBoxStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				B54D3C132AE4E64500DEB996 /* Constant.swift in Sources */,
 				B5D65D1F2AE686AB00DC051B /* ListRowItemView.swift in Sources */,
 				B54D3C112ADD7E6000DEB996 /* Devote.xcdatamodeld in Sources */,
+				B5D65D212AE6889800DC051B /* CheckBoxStyle.swift in Sources */,
 				B54D3BF02ADD6C9D00DEB996 /* DevoteApp.swift in Sources */,
 				B54D3C192AE51B6C00DEB996 /* NewTaskItemView.swift in Sources */,
 			);
