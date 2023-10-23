@@ -14,13 +14,15 @@ struct ContentView: View {
   
   @State var task: String = ""
   @State private var showNewTaskItem: Bool = false
-  
+  @State private var isActive: CGFloat = -50
   @Environment(\.managedObjectContext) private var viewContext
   
   @FetchRequest(
     sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)], animation: .default
   )
   private var items: FetchedResults<Item>
+  
+
   
   
   
@@ -135,6 +137,14 @@ struct ContentView: View {
           .padding(.vertical, 0)
           .frame(maxWidth: 640)
         } //: VSTACK
+        .blur(radius: showNewTaskItem ? 8.0 : 0, opaque: false)
+        .transition(.move(edge: .bottom))
+        .offset(x:0, y:isActive)
+        .onAppear {
+          withAnimation(.easeOut(duration: 0.5)) {
+            isActive = 0
+          }
+        }
         // MARK: - NEW TASK ITEM
         
         if showNewTaskItem {
@@ -157,6 +167,10 @@ struct ContentView: View {
       }
       .navigationTitle("Daily Tasks")
       .navigationBarTitleDisplayMode(.large)
+      .background(
+        BackgroundImageView()
+          .blur(radius: showNewTaskItem ? 8.0: 0, opaque: false)
+      )
       .navigationBarHidden(true)
       .toolbar {
 #if os(iOS)
