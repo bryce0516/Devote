@@ -67,8 +67,8 @@ struct DevoteWidget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Devote Launcher")
+        .description("This is an example widget for the personal task manager app.")
     }
 }
 
