@@ -14,7 +14,7 @@ struct ContentView: View {
   
   @State var task: String = ""
   @State private var showNewTaskItem: Bool = false
-
+  
   @Environment(\.managedObjectContext) private var viewContext
   
   @FetchRequest(
@@ -23,7 +23,7 @@ struct ContentView: View {
   private var items: FetchedResults<Item>
   
   
-
+  
   
   private func deleteItems(offsets: IndexSet) {
     withAnimation {
@@ -72,7 +72,7 @@ struct ContentView: View {
                 .frame(width: 24, height: 24)
                 .font(.system(.title, design: .rounded))
             })
-          
+            
           } //: HSTACK
           .padding()
           .foregroundColor(.white)
@@ -88,7 +88,7 @@ struct ContentView: View {
               .font(.system(size: 30, weight: .semibold, design: .rounded))
             Text("New Task")
               .font(.system(size: 24, weight: .bold, design: .rounded))
-              
+            
           })
           .foregroundColor(.white)
           .padding(.horizontal, 20)
@@ -97,8 +97,8 @@ struct ContentView: View {
             LinearGradient(
               gradient: Gradient(
                 colors: [Color.pink, Color.blue]),
-                startPoint: .leading,
-                endPoint: .trailing
+              startPoint: .leading,
+              endPoint: .trailing
             )
           )
           .shadow(
@@ -113,15 +113,15 @@ struct ContentView: View {
           List {
             ForEach(items) { item in
               ListRowItemView(item: item)
-//              VStack(alignment: .leading) {
-//                Text(item.task ?? "")
-//                  .font(.headline)
-//                  .fontWeight(.bold)
-//                
-//                Text("Items at \(item.timestamp!, formatter: itemFormatter)")
-//                  .font(.footnote)
-//                  .foregroundColor(.gray)
-//              } //: LIST ITEM
+              //              VStack(alignment: .leading) {
+              //                Text(item.task ?? "")
+              //                  .font(.headline)
+              //                  .fontWeight(.bold)
+              //
+              //                Text("Items at \(item.timestamp!, formatter: itemFormatter)")
+              //                  .font(.footnote)
+              //                  .foregroundColor(.gray)
+              //              } //: LIST ITEM
             }
             .onDelete(perform: deleteItems)
           } //: LIST
@@ -138,12 +138,15 @@ struct ContentView: View {
         // MARK: - NEW TASK ITEM
         
         if showNewTaskItem {
-          BlankView()
-            .onTapGesture {
-              withAnimation() {
-                showNewTaskItem = false
-              }
+          BlankView(
+            backgroundColor: isDarkMode ? Color.black : Color.gray,
+            backgroundOpacity: isDarkMode ? 0.3 : 0.5
+          )
+          .onTapGesture {
+            withAnimation() {
+              showNewTaskItem = false
             }
+          }
           NewTaskItemView(isShowing: $showNewTaskItem)
         }
         
