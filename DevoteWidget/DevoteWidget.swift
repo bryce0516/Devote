@@ -72,9 +72,15 @@ struct DevoteWidget: Widget {
     }
 }
 
-#Preview(as: .systemSmall) {
-    DevoteWidget()
-} timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+struct DevoteWidget_PreviewProvider {
+  static var previes: some View {
+    Group {
+      DevoteWidgetEntryView(entry: SimpleEntry(date: Date(), emoji: "😀"))
+        .previewContext(WidgetPreviewContext(family: .systemSmall))
+      DevoteWidgetEntryView(entry: SimpleEntry(date: Date(), emoji: "🤩"))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
+      DevoteWidgetEntryView(entry: SimpleEntry(date: Date(), emoji: "😀"))
+        .previewContext(WidgetPreviewContext(family: .systemLarge))
+    }
+  }
 }
