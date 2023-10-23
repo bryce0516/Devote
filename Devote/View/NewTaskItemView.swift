@@ -67,6 +67,11 @@ struct NewTaskItemView: View {
             Spacer()
           })
         .disabled(isButtonDisabled)
+        .onTapGesture {
+          if isButtonDisabled {
+            playSound(sound: "sound-tap", type: "mp3")
+          }
+        }
         .padding()
         .font(.headline)
         .foregroundColor(.white)
