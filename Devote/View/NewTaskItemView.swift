@@ -58,6 +58,7 @@ struct NewTaskItemView: View {
         Button(
           action: {
             additem()
+            playSound(sound: "sound-ding", type: "mp3")
           },
           label: {
             Spacer()
